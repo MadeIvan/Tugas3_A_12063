@@ -79,11 +79,11 @@ if uploaded_file is not None:
     st.dataframe(input_data)
     
     
-    model_directory =r'D:\SEMESTER 5\Machine Learning\Regresi\Tugas3_A_12063'
-    model_path = os.path.join(model_directory, r'SVR_IPK_model.pkl')
 
-    if os.path.exists(model_path):
-        with open(model_path, 'rb') as f:
+    model ='SVR_IPK_model.pkl'
+
+    if os.path.exists(model):
+        with open(model, 'rb') as f:
             loaded_model = pickle.load(f)
 
         scaler = loaded_model[0]
